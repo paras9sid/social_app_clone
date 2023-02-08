@@ -1,7 +1,8 @@
 const API_ROOT = 'http://codeial.codingninjas.com:8000/api/v2/';
 
 // doc url - https://www.notion.so/aakashcn/Codeial-API-docs-3a4d0b5a42c54f0a94d951a42aabc13f
-export const API_URLS = { //object contains keys and properties
+export const API_URLS = {
+  //object contains keys and properties
   login: () => `${API_ROOT}/users/login`,
   signup: () => `${API_ROOT}/users/signup`,
   posts: (page, limit) => `${API_ROOT}/posts?page=${page}&limit=${limit}`,
@@ -21,3 +22,5 @@ export const API_URLS = { //object contains keys and properties
   userInfo: (userId) => `${API_ROOT}/users/${userId}`,
   searchUsers: (searchText) => `${API_ROOT}/users/search?text=${searchText}`,
 };
+
+export const LOCALSTORAGE_TOKEN_KEY = '__codeial_token__';
